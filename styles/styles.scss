@@ -8,35 +8,36 @@
 .game-container {
     height: 25rem;
     width: 50rem;
-    border: .2rem solid black;
     margin: auto;
     position: relative;
+    background-color: rgb(220,220,220);
 }
 
-.game-over-overlay {
-    background-color: black;
-    width: 100%;
-    height: 100%;
+.overlay {
     display: none;
-    color: red;
     position: absolute;
     z-index: 999;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 25rem;
+    font-size: 5rem;
 }
 
-.game-over-overlay:hover {
+.game-over-screen {
+    background-color: black;
+    color: red;
+}
+
+.game-over-screen:hover {
     display: block;
 }
 
-.victory-overlay {
+.victory-screen {
     background-color: green;
-    width: 100%;
-    height: 100%;
-    display: none;
-    position: absolute;
-    z-index: 999;
 }
 
-.victory-overlay:hover {
+.victory-screen:hover {
     display: block;
 }
 
@@ -51,20 +52,53 @@
     z-index: 1;
 }
 
+.wall {
+    background-color: rgb(90, 90, 90);
+    position: absolute;
+}
 
-#obstacle-1 {
-    background-color: black;
+.enemy {
+    position: absolute;
+}
+
+.enemy:hover~.game-over-screen, .wall:hover~.game-over-screen {
+    display: block;
+}
+
+.endzone:hover~.victory-screen {
+    display: block;
+}
+
+
+/* walls */
+#wall-1 {
     width: 5rem;
     height: 5rem;
-    position: absolute;
     top: 10rem;
     left: 5rem;
 }
 
-#obstacle-1:hover~.game-over-overlay {
-    display: block;
+/* enemys */
+#ghost-1 {
+    width: 2rem;
+    height: 2rem;
+    top: 10rem;
+    left: 30rem;
+    background-color: red;
+    animation: test 5s linear infinite;
 }
 
-.endzone:hover~.victory-overlay {
-    display: block;
+@keyframes test {
+    25% {
+        top: 15rem;
+        left: 30rem;
+    }
+    50% {
+        top: 15rem;
+        left: 35rem;
+    }
+    75% {
+        top: 10rem;
+        left: 35rem;
+    }
 }
