@@ -43,13 +43,12 @@
 
 .endzone {
     background-color: black;
+    position: absolute;
     width: 5rem;
     height: 5rem;
-    position: absolute;
     top: 10rem;
     left: 20rem;
     background-color: green;
-    z-index: 1;
 }
 
 .wall {
@@ -61,10 +60,8 @@
     position: absolute;
 }
 
-.enemy:hover~.game-over-screen, .wall:hover~.game-over-screen {
-    display: block;
-}
-
+.enemy:hover~.game-over-screen, 
+.wall:hover~.game-over-screen, 
 .endzone:hover~.victory-screen {
     display: block;
 }
