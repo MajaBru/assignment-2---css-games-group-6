@@ -9,6 +9,9 @@
     color: rgb(26, 152, 255);
     padding: 2rem;
     text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Monoton', cursive;
+
 }
 
 .game-container {
@@ -28,11 +31,18 @@
     text-align: center;
     line-height: 25rem;
     font-size: 5rem;
+    font-family: 'Carter One', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Monoton', cursive;
+
 }
 
 .game-over-screen {
     background-color: black;
     color: red;
+    font-family: 'Carter One', cursive;
+
+
 }
 
 .game-over-screen:hover {
@@ -49,13 +59,12 @@
 
 .endzone {
     background-color: black;
+    position: absolute;
     width: 5rem;
     height: 5rem;
-    position: absolute;
     top: 10rem;
     left: 20rem;
     background-color: green;
-    z-index: 1;
 }
 
 .wall {
@@ -67,10 +76,8 @@
     position: absolute;
 }
 
-.enemy:hover~.game-over-screen, .wall:hover~.game-over-screen {
-    display: block;
-}
-
+.enemy:hover~.game-over-screen, 
+.wall:hover~.game-over-screen, 
 .endzone:hover~.victory-screen {
     display: block;
 }
