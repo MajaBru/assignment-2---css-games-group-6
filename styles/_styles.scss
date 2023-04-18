@@ -1,8 +1,12 @@
+
 .header {
     font-size: 2rem;
     color: blue;
     padding: 2rem;
     text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Monoton', cursive;
+
 }
 
 .game-container {
@@ -22,11 +26,18 @@
     text-align: center;
     line-height: 25rem;
     font-size: 5rem;
+    font-family: 'Carter One', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Monoton', cursive;
+
 }
 
 .game-over-screen {
     background-color: black;
     color: red;
+    font-family: 'Carter One', cursive;
+
+
 }
 
 .game-over-screen:hover {
