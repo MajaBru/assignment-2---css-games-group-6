@@ -92,16 +92,88 @@ font-family: 'Monoton', cursive;
 }
 
 /* enemys */
+
+
+/* enemys */
 #ghost-1 {
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     top: 10rem;
     left: 30rem;
-    background-color: red;
     animation: test 5s linear infinite;
+    background-image: url(/assets/ghost_enemy.png);
+    background-repeat: no-repeat;
+}
+  
+
+#ghost-2 {
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 3rem;
+    left: 30rem;
+    animation: ghost-2 4s infinite;
+    background-image: url(/assets/blue_ghost.png);
+    background-repeat: no-repeat;
 }
 
+#ghost-3 {
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 10rem;
+    left: 30rem;
+    animation: ghost-3 4s infinite;
+    background-image: url(/assets/yellow_ghost.png);
+    background-repeat: no-repeat;
+}
+
+#target {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid rgb(255, 225, 0);
+    position: absolute;
+    top: 4rem;
+    left: 30rem;
+    animation: spin 5s linear infinite ;
+   
+}
+
+
 @keyframes test {
+    0% { 
+        left: 5rem;
+        top: 16rem;
+     
+    }
+
+    25% {
+        left: 40rem;
+        top: 16rem;
+    }
+
+    100% {
+        left: 5rem;
+        top: 16rem;
+    }
+ 
+ 
+
+}
+
+@keyframes ghost-2 {
+  
+    100% {
+        top: 2rem;
+    }
+   
+    50% {
+        top: 8rem;
+    }
+}
+
+
+@keyframes ghost-3 {
     25% {
         top: 15rem;
         left: 30rem;
@@ -114,4 +186,17 @@ font-family: 'Monoton', cursive;
         top: 10rem;
         left: 35rem;
     }
+
 }
+
+
+@keyframes spin {
+  
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
