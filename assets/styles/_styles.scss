@@ -45,7 +45,6 @@ body {
     height: 100%;
     display: block;
     background-color: $maze__secondary;
-    border: 1px solid $maze__border;
 }
 
 .map__wall--w1 { grid-area: w1; }
@@ -143,8 +142,12 @@ body {
 
 /* enemies */
 
+$ghost__movement--fast: 1.5s;
+$ghost__movement--mid: 2s;
+$ghost__movement--slow: 4s;
+
 .ghost__one {
-    animation: ghost-movement 2s ease-in-out infinite;
+    animation: ghost-movement $ghost__movement--mid ease-in-out infinite;
     &__svg {
         height: 45px;
         width: 45px;
@@ -157,7 +160,7 @@ body {
 }
 
 .ghost__two {
-    animation: ghost-movement-2 4s ease-in-out alternate infinite;
+    animation: ghost-movement-2 $ghost__movement--slow ease-in-out alternate infinite;
     &__svg {
         height: 45px;
         width: 45px;
@@ -170,7 +173,7 @@ body {
 }
 
 .ghost__three {
-    animation: ghost-movement-3 2s ease-in-out infinite;
+    animation: ghost-movement-3 $ghost__movement--mid ease-in-out infinite;
     &__svg {
         height: 45px;
         width: 45px;
@@ -182,11 +185,23 @@ body {
     }
 }
 .ghost__four {
-    animation: ghost-movement-4 1.5s ease-in-out infinite alternate;
+    animation: ghost-movement-4 $ghost__movement--fast ease-in-out infinite alternate;
     &__svg {
         height: 45px;
         width: 45px;
         fill: $ghost__four;
+        &--lens {
+            fill: $ghost__eyes;
+	        animation: moving-eyes 2s ease-in-out infinite alternate;
+        }
+    }
+}
+.ghost__five {
+    animation: ghost-movement-5 $ghost__movement--mid ease-in-out infinite;
+    &__svg {
+        height: 45px;
+        width: 45px;
+        fill: $ghost__five;
         &--lens {
             fill: $ghost__eyes;
 	        animation: moving-eyes 2s ease-in-out infinite alternate;
