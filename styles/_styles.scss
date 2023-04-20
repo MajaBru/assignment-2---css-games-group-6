@@ -273,8 +273,8 @@ body {
     font-family: 'Carter One', cursive;
 font-family: 'Lato', sans-serif;
 font-family: 'Monoton', cursive;
-
 }
+
 
 .game-over-screen {
     background-color: black;
@@ -288,6 +288,7 @@ font-family: 'Monoton', cursive;
 
 .victory-screen {
     background-color: green;
+    
 }
 
 .victory-screen:hover {
@@ -312,12 +313,13 @@ font-family: 'Monoton', cursive;
 }
 
 .enemy {
-    display: none;
     position: absolute;
 }
 
+
 .enemy:hover~.game-over-screen, 
 .maze:hover~.game-over-screen,
+path:hover~.game-over-screen,
 .goal-tile:hover~.victory-screen {
     display: block;
 }
@@ -331,21 +333,71 @@ font-family: 'Monoton', cursive;
     left: 5rem;
 }
 
-/* enemys */
+/* enemies */
 
 
-/* enemys */
+
+.ghost__one {
+    position:absolute;
+    top: 14.5rem;
+    left: 16.5rem;
+    animation: ghost-movement 1.5s ease-in-out infinite alternate;
+    pointer-events: all;
+    &__svg {
+        height: 50px;
+        width: 50px;
+        fill: #cf4200;
+        pointer-events: all;
+        &--lens {
+            fill: #000000;
+	        animation: moving-eyes 2s ease-in-out infinite alternate;
+        }
+    }
+}
+
+.ghost__two {
+    position:absolute;
+    top: 22rem;
+    left: 19.2rem;
+    animation: ghost-movement-2 .5s ease-in-out infinite alternate;
+    &__svg {
+        height: 45px;
+        width: 45px;
+        fill: #0061cf;
+        &--lens {
+            fill: #000000;
+	        animation: moving-eyes 2s ease-in-out infinite alternate;
+        }
+    }
+}
+
+.ghost__three {
+    position:absolute;
+    top: 21.9rem;
+    left: 38.2rem;
+    animation: ghost-movement-3 .8s ease-in-out infinite alternate;
+    &__svg {
+        height: 45px;
+        width: 45px;
+        fill: #ff9d2d;
+        &--lens {
+            fill: #000000;
+	        animation: moving-eyes 2s ease-in-out infinite alternate;
+        }
+    }
+}
+
+// for en eller annen grunn bør en eller annen png være med, fordi
+// hvis musa står stille når enemy går over, trigges ikke hover naturligvis.
+//men det fungerer for en grunn når en png er sammen med svgene
 #ghost-1 {
     width: 2.5rem;
     height: 2.5rem;
-    top: 10rem;
-    left: 30rem;
-    animation: test 5s linear infinite;
+    animation: test 5s infinite;
     background-image: url(/assets/ghost_enemy.png);
     background-repeat: no-repeat;
 }
   
-
 #ghost-2 {
     width: 2.5rem;
     height: 2.5rem;
@@ -379,26 +431,65 @@ font-family: 'Monoton', cursive;
    
 }
 
-
-@keyframes test {
-    0% { 
-        left: 5rem;
-        top: 16rem;
-     
+@keyframes moving-eyes {
+    0% {
+        transform: translateX(-4%);
     }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(4%);
+    }
+  }
 
-    25% {
-        left: 40rem;
-        top: 16rem;
+  @keyframes ghost-movement {
+    0% {
+        transform: translateX(0%);
     }
 
     100% {
-        left: 5rem;
-        top: 16rem;
+        transform: translateX(30rem);
+    }
+  }
+
+
+  @keyframes ghost-movement-2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(10rem);
+    }
+  }
+
+  @keyframes ghost-movement-3 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(18rem);
+    }
+  }
+
+@keyframes test {
+    0% { 
+        left: 40rem;
+        top: 34rem;
+    }
+
+    50% {
+        left: 60rem;
+        top: 34rem;
+    }
+
+    100% {
+        left: 40rem;
+        top: 34rem;
     }
  
- 
-
 }
 
 @keyframes ghost-2 {
