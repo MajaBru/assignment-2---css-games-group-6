@@ -48,7 +48,7 @@ body {
   height: 100%;
   display: block;
   background-color: #8b8b8b;
-  border: 1px solid rgb(102, 102, 102);
+  border: 1px solid #585858;
 }
 
 .map__wall--w1 {
@@ -167,12 +167,12 @@ body {
 
 .map__overlay--game-over {
   background-color: rgba(0, 0, 0, 0.9);
-  color: red;
+  color: #ee0000;
   font-family: "Carter One", cursive;
 }
 
 .map__overlay--victory {
-  background-color: rgba(0, 128, 0, 0.9);
+  background-color: rgba(7, 146, 18, 0.9);
   color: #fff;
   animation: slide-in 0.4s ease-in-out;
 }

@@ -8,16 +8,12 @@
 }
 
 body {
-    background-color: #000000;
-    opacity: 1;
-    background-image:  radial-gradient(#979be9 1.4500000000000002px, transparent 1.4500000000000002px), radial-gradient(#979be9 1.4500000000000002px, #252525 1.4500000000000002px);
-    background-size: 58px 58px;
-    background-position: 0 0,29px 29px;
+    @include background__gradient;
 }
 
 .header {
     font-size: 3rem;
-    color: $theme;
+    color: $text__primary;
     padding: .5rem;
     text-align: center;
     font-family: 'Lato', sans-serif;
@@ -30,7 +26,7 @@ body {
     padding: 5px;
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
-    color: $theme;
+    color: $text__primary;
 }
 
 .game-container {
@@ -41,15 +37,15 @@ body {
     position: relative;
     border-radius: 5px;
     border-radius: 5px;
-    border: 5px solid $theme;
+    border: 5px solid $maze__accent;
 }
 
 .map__wall {
     width: 100%;
     height: 100%;
     display: block;
-    background-color: $maze;
-    border: 1px solid rgb(102, 102, 102);
+    background-color: $maze__secondary;
+    border: 1px solid $maze__border;
 }
 
 .map__wall--w1 { grid-area: w1; }
@@ -76,7 +72,7 @@ body {
 .map__endzone { grid-area: end;}
 
 .map {
-    background-color: #dcdcdc;
+    background-color: $maze__primary;
     width: 100%;
     height: 100%;
     display: grid;
@@ -102,8 +98,8 @@ body {
     width: 100%;
     height: 100%;
     display: block;
-    background-color: $theme;
-    box-shadow: 0 0 10px $theme;
+    background-color: $purple;
+    box-shadow: 0 0 10px $purple;
     z-index: 999;
 }
 
@@ -122,14 +118,14 @@ body {
 }
 
 .map__overlay--game-over {
-    background-color: rgba(0, 0, 0, 0.9);
-    color: red;
+    background-color: transparentize($maze__gameover, .1);
+    color: $maze__text--game-over;
     font-family: 'Carter One', cursive;
 }
 
 .map__overlay--victory {
-    background-color: rgba(0, 128, 0, 0.9);
-    color: #fff;
+    background-color: transparentize($maze__victory, .1);
+    color: $maze__text--victory;
     animation: slide-in 0.4s ease-in-out;
 }
 
@@ -152,9 +148,9 @@ body {
     &__svg {
         height: 45px;
         width: 45px;
-        fill: #cf4200;
+        fill: $ghost__one;
         &--lens {
-            fill: #000000;
+            fill: $ghost__eyes;
 	        animation: moving-eyes 2s ease-in-out infinite alternate;
         }
     }
@@ -165,9 +161,9 @@ body {
     &__svg {
         height: 45px;
         width: 45px;
-        fill: #0061cf;
+        fill: $ghost__two;
         &--lens {
-            fill: #000000;
+            fill: $ghost__eyes;
 	        animation: moving-eyes 2s ease-in-out infinite alternate;
         }
     }
@@ -178,9 +174,9 @@ body {
     &__svg {
         height: 45px;
         width: 45px;
-        fill: #ff9d2d;
+        fill: $ghost__three;
         &--lens {
-            fill: #000000;
+            fill: $ghost__eyes;
 	        animation: moving-eyes 2s ease-in-out infinite alternate;
         }
     }
@@ -190,9 +186,9 @@ body {
     &__svg {
         height: 45px;
         width: 45px;
-        fill: #f82dff;
+        fill: $ghost__four;
         &--lens {
-            fill: #000000;
+            fill: $ghost__eyes;
 	        animation: moving-eyes 2s ease-in-out infinite alternate;
         }
     }
@@ -288,8 +284,6 @@ body {
         transform: translate(250px, 150px); 
     }
 }
-
-
 
 @keyframes slide-in {
     0% {
