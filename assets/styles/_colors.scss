@@ -1,9 +1,8 @@
 // Descriptive Colors
 $white: #fff;
 $black: #000000;
-$light-grey: #000000;
+$deep-purple: #150e1a;
 $dark-purple: #241346;
-$dark-grey: #372b49;
 $purple: #b535fa;
 $red: #ee0000;
 $green: #079212;
@@ -13,10 +12,10 @@ $light-orange: #ff9d2d;
 $magneta: #f82dff;
 
 // Functional Colors
-$maze__primary: $black;
+$maze__primary: $deep-purple;
 $maze__secondary: $dark-purple;
 $maze__accent: $purple;
-$maze__border: $dark-grey; 
+$maze__border: $purple;  // kan brukes eller tas vekk
 $maze__victory: $green;
 $maze__gameover: $black;
 $maze__text--victory: $white;
