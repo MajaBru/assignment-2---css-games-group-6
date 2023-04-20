@@ -10,4 +10,6 @@ How users can get started with the project?
 They will be taken to the main scene of the game where they must navigate the character through the maze by moving the mouse cursor in the corresponding direction. They must avoid touching like walls or ghosts.
 
 Which technology is used:
-The technologies used in this game include HTML, CSS and SCSS.
+The technologies used in this game include HTML, CSS,SCSS and BEM
+
+Who maintains and contributes to the project
