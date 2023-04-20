@@ -1,3 +1,41 @@
-$maze: #8b8b8b;
-$maze-accent: #5d4db4;
-$theme: #b535fa;
+// Descriptive Colors
+$white: #fff;
+$black: #000000;
+$light-grey: #dcdcdc;
+$grey: #8b8b8b;
+$dark-grey: #585858;
+$purple: #b535fa;
+$dark-purple: #5d4db4;
+$red: #ee0000;
+$green: #079212;
+$orange: #cf4200;
+$blue: #0061cf;
+$light-orange: #ff9d2d;
+$magneta: #f82dff;
+
+// Functional Colors
+$maze__primary: $light-grey;
+$maze__secondary: $grey;
+$maze__accent: $purple;
+$maze__border: $dark-grey;
+$maze__victory: $green;
+$maze__gameover: $black;
+$maze__text--victory: $white;
+$maze__text--game-over: $red;
+$text__primary: $purple;
+$ghost__one: $orange;
+$ghost__two: $blue;
+$ghost__three: $light-orange;
+$ghost__four: $magneta;
+$ghost__five: $red;
+$ghost__eyes: $black;
+
+// gradient mixin
+//gradient generated from: https://www.magicpattern.design/tools/css-backgrounds
+@mixin background__gradient { 
+    background-color: #000000;
+    opacity: 1;
+    background-image: radial-gradient(#979be9 1.4500000000000002px, transparent 1.4500000000000002px), radial-gradient(#979be9 1.4500000000000002px, #252525 1.4500000000000002px);
+    background-size: 58px 58px;
+    background-position: 0 0,29px 29px;
+}
