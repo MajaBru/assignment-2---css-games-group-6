@@ -13,10 +13,10 @@ The game is useful for users too because it can help improve their concentration
 Simply download the zip-file found on this Github page, extract it, then click the html file which will open the game up in the browser.
 
 ## Which technology is used:
-* The technologies used in this game include HTML, CSS/SASS (SCSS variables) and BEM.
+* The technologies used in this game include HTML, CSS/SASS (SCSS variables), BEM, and a tiny bit of JS for audio.
 * Retrieved background gradient from this CSS background builder tool: https://www.magicpattern.design/tools/css-backgrounds
 * Royalty free sound effect was retrieved from: https://mixkit.co/free-sound-effects/game/
+* Royalty free music from: https://pixabay.com/music/search/arcade%20game/?manual_search=1&order=None
 
 ## Who maintains and contributes to the project
-
 Maja Celin Brunsvik, Johannes Hansen Aas og Sabrina Altahrawi
