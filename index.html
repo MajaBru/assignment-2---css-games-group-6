@@ -2,12 +2,14 @@
   <head>
     <link rel="stylesheet" href="assets/styles/index.css" />
     <meta charset="utf-8" />
+    <script src="script.js" async></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Monoton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lato:ital@1&family=Monoton&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header class="header">CRAZY MAZY</header>
-    <p class="insturctions">START</p>
+    <header class="header">GHOST SPRINTER
+      <p class="insturctions">START</p>
+    </header>
     <div class="game-container">
       <div class="map">
         <div class="map__wall map__wall--w1"></div>
@@ -26,7 +28,8 @@
         <div class="map__wall map__wall--w14"></div>
         <div class="map__wall map__wall--w15"></div>
         <div class="map__wall map__wall--w16"></div>
-        <div class="map__endzone"></div>
+        <div class="map__endzone sound-target">
+        </div>
         <div class="ghost ghost__one">
           <svg class="ghost__one__svg" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path class="ghost__one__svg--body" d="M14.0678 0.315957C6.46427 0.520813 0.50577 6.8605 0.335595 14.4556L0.175926 21.5819C0.138108 23.2698 0.0603741 26.7391 0.0183573 28.6144C0.00364989 29.2708 0.65166 29.6605 1.22261 29.2981L3.40867 28.0337C4.2631 27.5838 5.29455 27.6069 6.12787 28.0946L8.07179 29.264C8.90521 29.7517 9.93666 29.7748 10.791 29.3249L12.7853 28.2438C13.6398 27.7939 14.6712 27.817 15.5045 28.3047L17.4484 29.4741C18.2819 29.9618 19.3133 29.9849 20.1676 29.535L22.162 28.4539C23.0164 28.004 24.0479 28.0271 24.8812 28.5148L26.9168 29.78C27.4731 30.0739 28.1378 29.7136 28.1504 29.1509C28.1945 27.1818 28.2723 23.7124 28.308 22.1184L28.4761 14.617C28.6527 6.7406 22.1402 0.121603 14.0678 0.315957Z"/>
