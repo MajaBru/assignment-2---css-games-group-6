@@ -17,6 +17,7 @@ Simply download the zip-file found on this Github page, extract it, then click t
 * Retrieved background gradient from this CSS background builder tool: https://www.magicpattern.design/tools/css-backgrounds
 * Royalty free sound effect was retrieved from: https://mixkit.co/free-sound-effects/game/
 * Royalty free music from: https://pixabay.com/music/search/arcade%20game/?manual_search=1&order=None
+* Icons from: https://fontawesome.com/
 
 ## Who maintains and contributes to the project
 Maja Celin Brunsvik, Johannes Hansen Aas og Sabrina Altahrawi
