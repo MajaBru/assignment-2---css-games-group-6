@@ -82,6 +82,8 @@ body {
 .ghost__one { grid-area: g1; }
 .ghost__two { grid-area: g2; }
 .ghost__three { grid-area: g3; }
+.ghost__four { grid-area: g4; }
+.ghost__five { grid-area: g5; }
 
 .map__endzone { grid-area: end;}
 
@@ -97,14 +99,14 @@ body {
         "w1  w1  w1  w1  w1  w1  w1  w1  w1  .   .   w2  w2  w2  w2  w2  w2  w2  w2  w2"
         "w1  w1  w1  w1  w1  w1  w1  w1  w1  .   .   w2  w2  w2  w2  w2  w2  w2  w2  w2"
         "w1  w1  w1  w1  w1  w1  w1  w1  w1  .   .   w2  w2  w2  w2  w2  w2  w2  w2  w2"
-        "w3  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   w5"
+        "w3  .   .   .   .   .   .   g4  .   .   .   .   .   .   .   .   .   .   .   w5"
         "w3  .   w6  w6  w6  w6  w6  w6  w6  w6  w6  w6  w6  w6  w6  .   .   .   .   w5"
         "w3  .   w8  .   .   .   .   w9  .   .   .   .   .   .   w7  .   .   .   .   w5"
         "w3  .   w8  .   w16 .   .   w9  .   w11 .   w12 w13 .   w7  .   w15 w15 .   w5"
         "w3  .   .   .   .   g3  .   w9  end w11 g1  w12 .   .   w7  .   w15 w15 .   w5"
         "w3  w14 w14 w14 w14 w14 .   w9  w10 w11 .   w12 .   .   w7  .   .   .   g2  w5"
         "w3  w14 w14 w14 w14 w14 .   .   w10 .   .   w12 .   .   w7  .   .   .   .   w5"
-        "w3  w14 w14 w14 w14 w14 .   .   .   .   .   .   .   .   .   .   .   .   .   w5"
+        "w3  w14 w14 w14 w14 w14 .   g5  .   .   .   .   .   .   .   .   .   .   .   w5"
         "w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4";
 }
 
@@ -212,7 +214,7 @@ $ghost__movement--slow: 4s;
     }
 }
 .ghost__five {
-    animation: ghost-movement-5 $ghost__movement--mid ease-in-out infinite;
+    animation: ghost-movement-5 $ghost__movement--mid ease-in-out alternate infinite;
     &__svg {
         height: 45px;
         width: 45px;

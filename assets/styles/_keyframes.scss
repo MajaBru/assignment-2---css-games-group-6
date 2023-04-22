@@ -80,25 +80,14 @@
     }
 }
 @keyframes ghost-movement-4 {
-    0% { 
-        transform: translate(-200px, 150px); 
-    }
-
     100% { 
-        transform: translate(250px, 150px); 
+        transform: translateX(250px); 
     }
 }
 
 @keyframes ghost-movement-5 {
-    0% { 
-        transform: translate(-200px, 500px); 
-    }
-
-    50% { 
-        transform: translate(250px, 500px); 
-    }
     100% {
-        transform: translate(-200px, 500px); 
+        transform: translateX(400px); 
     }
 }
 

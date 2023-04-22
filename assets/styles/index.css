@@ -142,6 +142,14 @@ body {
   grid-area: g3;
 }
 
+.ghost__four {
+  grid-area: g4;
+}
+
+.ghost__five {
+  grid-area: g5;
+}
+
 .map__endzone {
   grid-area: end;
 }
@@ -154,7 +162,7 @@ body {
   grid-template-columns: repeat(19, 50px);
   grid-template-rows: repeat(11, 50px);
   gap: 0;
-  grid-template-areas: "w1  w1  w1  w1  w1  w1  w1  w1  w1  .   .   w2  w2  w2  w2  w2  w2  w2  w2  w2" "w1  w1  w1  w1  w1  w1  w1  w1  w1  .   .   w2  w2  w2  w2  w2  w2  w2  w2  w2" "w1  w1  w1  w1  w1  w1  w1  w1  w1  .   .   w2  w2  w2  w2  w2  w2  w2  w2  w2" "w3  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   w5" "w3  .   w6  w6  w6  w6  w6  w6  w6  w6  w6  w6  w6  w6  w6  .   .   .   .   w5" "w3  .   w8  .   .   .   .   w9  .   .   .   .   .   .   w7  .   .   .   .   w5" "w3  .   w8  .   w16 .   .   w9  .   w11 .   w12 w13 .   w7  .   w15 w15 .   w5" "w3  .   .   .   .   g3  .   w9  end w11 g1  w12 .   .   w7  .   w15 w15 .   w5" "w3  w14 w14 w14 w14 w14 .   w9  w10 w11 .   w12 .   .   w7  .   .   .   g2  w5" "w3  w14 w14 w14 w14 w14 .   .   w10 .   .   w12 .   .   w7  .   .   .   .   w5" "w3  w14 w14 w14 w14 w14 .   .   .   .   .   .   .   .   .   .   .   .   .   w5" "w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4";
+  grid-template-areas: "w1  w1  w1  w1  w1  w1  w1  w1  w1  .   .   w2  w2  w2  w2  w2  w2  w2  w2  w2" "w1  w1  w1  w1  w1  w1  w1  w1  w1  .   .   w2  w2  w2  w2  w2  w2  w2  w2  w2" "w1  w1  w1  w1  w1  w1  w1  w1  w1  .   .   w2  w2  w2  w2  w2  w2  w2  w2  w2" "w3  .   .   .   .   .   .   g4  .   .   .   .   .   .   .   .   .   .   .   w5" "w3  .   w6  w6  w6  w6  w6  w6  w6  w6  w6  w6  w6  w6  w6  .   .   .   .   w5" "w3  .   w8  .   .   .   .   w9  .   .   .   .   .   .   w7  .   .   .   .   w5" "w3  .   w8  .   w16 .   .   w9  .   w11 .   w12 w13 .   w7  .   w15 w15 .   w5" "w3  .   .   .   .   g3  .   w9  end w11 g1  w12 .   .   w7  .   w15 w15 .   w5" "w3  w14 w14 w14 w14 w14 .   w9  w10 w11 .   w12 .   .   w7  .   .   .   g2  w5" "w3  w14 w14 w14 w14 w14 .   .   w10 .   .   w12 .   .   w7  .   .   .   .   w5" "w3  w14 w14 w14 w14 w14 .   g5  .   .   .   .   .   .   .   .   .   .   .   w5" "w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4";
 }
 
 .map__endzone {
@@ -257,7 +265,7 @@ body {
 }
 
 .ghost__five {
-  animation: ghost-movement-5 2s ease-in-out infinite;
+  animation: ghost-movement-5 2s ease-in-out alternate infinite;
 }
 .ghost__five__svg {
   height: 45px;
@@ -347,22 +355,13 @@ body {
   }
 }
 @keyframes ghost-movement-4 {
-  0% {
-    transform: translate(-200px, 150px);
-  }
   100% {
-    transform: translate(250px, 150px);
+    transform: translateX(250px);
   }
 }
 @keyframes ghost-movement-5 {
-  0% {
-    transform: translate(-200px, 500px);
-  }
-  50% {
-    transform: translate(250px, 500px);
-  }
   100% {
-    transform: translate(-200px, 500px);
+    transform: translateX(400px);
   }
 }
 @keyframes slide-in {
