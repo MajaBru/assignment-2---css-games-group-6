@@ -1,5 +1,5 @@
 // sound effect for reaching the goal
-let sound = new Audio("/assets/audio/bling_audio.mp3");
+let sound = new Audio("assets/audio/bling_audio.mp3");
 let endzone = document.querySelector(".map__overlay--victory");
 
 let play = () => {
@@ -9,7 +9,7 @@ let play = () => {
 endzone.addEventListener('mouseover', play);
 
 // background music toggler
-let bgMusic = new Audio('/assets/audio/music-arcade.mp3');
+let bgMusic = new Audio('assets/audio/music-arcade.mp3');
 let toggleMusic = document.querySelector("#music__button")
 
 toggleMusic.addEventListener("click", ()=> {
