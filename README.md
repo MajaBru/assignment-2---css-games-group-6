@@ -20,4 +20,4 @@ Simply download the zip-file found on this Github page, extract it, then click t
 * Icons from: https://fontawesome.com/
 
 ## Who maintains and contributes to the project
-Maja Celin Brunsvik, Johannes Hansen Aas og Sabrina Altahrawi
+Maja Celin Brunsvik, Johannes Aas og Sabrina Altahrawi
