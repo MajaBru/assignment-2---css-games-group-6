@@ -16,7 +16,7 @@ toggleMusic.addEventListener("click", ()=> {
     if (bgMusic.paused) {
       bgMusic.play();
       bgMusic.loop=true;
-      bgMusic.volume = 0.4;
+      bgMusic.volume = 1;
       toggleMusic.innerHTML = "<i class='fas fa-stop'></i>"
     } else {
       bgMusic.pause();
