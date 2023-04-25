@@ -1,0 +1,227 @@
+@use "colors" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    cursor: url("../images/blob_cursor.png") 10 15, auto;
+    box-sizing: border-box;
+}
+
+body {
+    @include background__gradient;
+}
+
+.header {
+    margin-top: 1rem;
+    color: $text__primary;
+    padding: .5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-direction: column;
+    h1 {
+        font-size: 3rem;
+        font-weight: lighter;
+        font-family: 'Lato', sans-serif;
+        font-family: 'Monoton', cursive;
+    }
+    button {
+        padding: 10px 18px 12px;
+        border: none;
+        border-radius: 0.8rem;
+        background-color: $dark-purple;
+        color: $white;
+        font-family: 'Lato', sans-serif;
+        box-shadow: 5px 5px 0 0 $purple;
+    }
+}
+.insturctions {
+    margin-top: 1rem;
+    width: fit-content;
+    padding: 5px;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $text__primary;
+}
+
+.game-container {
+    height: 600px;
+    width: 1000px;
+    margin: auto;
+    margin-bottom: 50px;
+    position: relative;
+    border-radius: 5px;
+    border-radius: 5px;
+    border: 5px solid $maze__accent;
+}
+
+.map__wall {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: $maze__secondary;
+}
+
+.map__wall--w1 { grid-area: w1; }
+.map__wall--w2 { grid-area: w2; }
+.map__wall--w3 { grid-area: w3; }
+.map__wall--w4 { grid-area: w4; }
+.map__wall--w5 { grid-area: w5; }
+.map__wall--w6 { grid-area: w6; }
+.map__wall--w7 { grid-area: w7; }
+.map__wall--w8 { grid-area: w8; }
+.map__wall--w9 { grid-area: w9; }
+.map__wall--w10 { grid-area: w10; }
+.map__wall--w11 { grid-area: w11; }
+.map__wall--w12 { grid-area: w12; }
+.map__wall--w13 { grid-area: w13; }
+.map__wall--w14 { grid-area: w14; }
+.map__wall--w15 { grid-area: w15; }
+.map__wall--w16 { grid-area: w16; }
+
+.ghost__one { grid-area: g1; }
+.ghost__two { grid-area: g2; }
+.ghost__three { grid-area: g3; }
+.ghost__four { grid-area: g4; }
+.ghost__five { grid-area: g5; }
+
+.map__endzone { grid-area: end;}
+
+.map {
+    background-color: $maze__primary;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(19, 50px);
+    grid-template-rows: repeat(11, 50px);
+    gap: 0;
+    grid-template-areas: 
+        "w1  w1  w1  w1  w1  w1  w1  w1  w1  .   .   w2  w2  w2  w2  w2  w2  w2  w2  w2"
+        "w1  w1  w1  w1  w1  w1  w1  w1  w1  .   .   w2  w2  w2  w2  w2  w2  w2  w2  w2"
+        "w1  w1  w1  w1  w1  w1  w1  w1  w1  .   .   w2  w2  w2  w2  w2  w2  w2  w2  w2"
+        "w3  .   .   .   .   .   .   g4  .   .   .   .   .   .   .   .   .   .   .   w5"
+        "w3  .   w6  w6  w6  w6  w6  w6  w6  w6  w6  w6  w6  w6  w6  .   .   .   .   w5"
+        "w3  .   w8  .   .   .   .   w9  .   .   .   .   .   .   w7  .   .   .   .   w5"
+        "w3  .   w8  .   w16 .   .   w9  .   w11 .   w12 w13 .   w7  .   w15 w15 .   w5"
+        "w3  .   .   .   .   g3  .   w9  end w11 g1  w12 .   .   w7  .   w15 w15 .   w5"
+        "w3  w14 w14 w14 w14 w14 .   w9  w10 w11 .   w12 .   .   w7  .   .   .   g2  w5"
+        "w3  w14 w14 w14 w14 w14 .   .   w10 .   .   w12 .   .   w7  .   .   .   .   w5"
+        "w3  w14 w14 w14 w14 w14 .   g5  .   .   .   .   .   .   .   .   .   .   .   w5"
+        "w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4  w4";
+}
+
+.map__endzone {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: $purple;
+    box-shadow: 0 0 10px $purple;
+    z-index: 999;
+}
+
+.map__overlay {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 600px;
+    font-size: 5rem;
+    font-family: 'Carter One', cursive;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Monoton', cursive;
+}
+
+.map__overlay--game-over {
+    background-color: transparentize($maze__gameover, .1);
+    color: $maze__text--game-over;
+    font-family: 'Carter One', cursive;
+}
+
+.map__overlay--victory {
+    background-color: transparentize($maze__victory, .1);
+    color: $maze__text--victory;
+    animation: slide-in 0.4s ease-in-out;
+}
+
+.map__overlay:hover {
+    display: block;
+}
+
+.enemy:hover~.map__overlay--game-over, 
+.map__wall:hover~.map__overlay--game-over,
+.ghost:hover~.map__overlay--game-over,
+.map__endzone:hover~.map__overlay--victory {
+    display: block;
+}
+
+
+/* enemies */
+
+$ghost__movement--fast: 1.5s;
+$ghost__movement--mid: 2s;
+$ghost__movement--slow: 4s;
+
+.ghost__one {
+    animation: ghost-movement $ghost__movement--mid ease-in-out infinite;
+    &__svg {
+        height: 45px;
+        width: 45px;
+        fill: $ghost__one;
+        &--lens {
+            fill: $ghost__eyes;
+	        animation: moving-eyes 2s ease-in-out infinite alternate;
+        }
+    }
+}
+
+.ghost__two {
+    animation: ghost-movement-2 $ghost__movement--slow ease-in-out alternate infinite;
+    &__svg {
+        height: 45px;
+        width: 45px;
+        fill: $ghost__two;
+        &--lens {
+            fill: $ghost__eyes;
+	        animation: moving-eyes 2s ease-in-out infinite alternate;
+        }
+    }
+}
+
+.ghost__three {
+    animation: ghost-movement-3 $ghost__movement--mid ease-in-out infinite;
+    &__svg {
+        height: 45px;
+        width: 45px;
+        fill: $ghost__three;
+        &--lens {
+            fill: $ghost__eyes;
+	        animation: moving-eyes 2s ease-in-out infinite alternate;
+        }
+    }
+}
+.ghost__four {
+    animation: ghost-movement-4 $ghost__movement--fast ease-in-out infinite alternate;
+    &__svg {
+        height: 45px;
+        width: 45px;
+        fill: $ghost__four;
+        &--lens {
+            fill: $ghost__eyes;
+	        animation: moving-eyes 2s ease-in-out infinite alternate;
+        }
+    }
+}
+.ghost__five {
+    animation: ghost-movement-5 $ghost__movement--mid ease-in-out alternate infinite;
+    &__svg {
+        height: 45px;
+        width: 45px;
+        fill: $ghost__five;
+        &--lens {
+            fill: $ghost__eyes;
+	        animation: moving-eyes 2s ease-in-out infinite alternate;
+        }
+    }
+}

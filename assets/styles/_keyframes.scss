@@ -1,0 +1,105 @@
+
+@keyframes moving-eyes {
+    0% {
+        transform: translateX(-1.5px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(1.5px);
+    }
+}
+
+@keyframes ghost-movement {
+    25% { 
+        left: 0; 
+        top: 100%; 
+        transform: translate(0%, -100px); 
+    }
+    50% { 
+        left: 100%;
+        top: 100%; 
+        transform: translate(100px, -100px);
+    }
+    75% { 
+        left: 0; 
+        top: 0; 
+        transform: translate(0, -100px); 
+    }
+    100% { 
+        left: 0; 
+        top: 0; 
+        transform: translate(0, 0); 
+    }
+}
+
+@keyframes ghost-movement-2 {
+    25% { 
+        left: 0; 
+        top: 100%; 
+        transform: translate(0%, -150px); 
+    }
+    50% { 
+        left: 100%; 
+        top: 100%; 
+        transform: translate(-150px, -150px); 
+    }
+    75% { 
+        left: 100%; 
+        top: 0; 
+        transform: translate(-150px, 0%); 
+    }
+    100% { 
+        left: 0; 
+        top: 0; 
+        transform: translate(-0%, 0%); 
+    }
+}
+
+@keyframes ghost-movement-3 {
+    25% { 
+        left: 0; 
+        top: 100%; 
+        transform: translate(0%, -100px); 
+    }
+    50% { 
+        left: 100%; 
+        top: 100%; 
+        transform: translate(-100px, -100px); 
+    }
+    75% { 
+        left: 100%; 
+        top: 0; 
+        transform: translate(-100px, 0%);
+    }
+    100% { 
+        left: 0; 
+        top: 0; 
+        transform: translate(-0%, 0%);
+    }
+}
+@keyframes ghost-movement-4 {
+    100% { 
+        transform: translateX(250px); 
+    }
+}
+
+@keyframes ghost-movement-5 {
+    100% {
+        transform: translateX(400px); 
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        transform: rotateX(70deg);
+        transform-origin: top;
+        opacity: 0;
+    }
+    100% {
+        transform: rotateX(0deg);
+        transform-origin: top;
+        opacity: 1;
+    }
+  }
