@@ -10,7 +10,10 @@ The project is useful to us students as we learn creative ways of utilizing CSS 
 The game is useful for users too because it can help improve their concentration, problem solving skills, and reaction time. Additionally, it can be a fun and entertaining way to spend leisure time. 
 
 ## How to start playing the game?
-Simply clone or download this repository and open index.html in your browser.
+
+Check it out here: https://majabru.github.io/mazegame/
+
+Or simply clone or download this repository and open index.html in your browser.
 
 ## Which technology is used:
 * The technologies used in this game include HTML, CSS/SASS (SCSS variables), and JS for regulating audio.
